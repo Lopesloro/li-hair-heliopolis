@@ -6,457 +6,417 @@
 <meta name="robots" content="noindex, nofollow">
 <title>Li Hair | Salão de beleza na Vila Heliópolis</title>
 <meta name="description" content="Loiros, alisamentos e tratamentos com saúde para os fios. Salão da Liliane Barbosa na Vila Heliópolis, São Paulo. Nota 4,9 no Google.">
-<meta name="theme-color" content="#f6efe9">
+<meta name="theme-color" content="#23201C">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Li Hair | Você não precisa desistir do loiro">
 <meta property="og:description" content="Loiros, alisamentos e tratamentos com saúde para os fios. Vila Heliópolis, São Paulo.">
 <meta property="og:image" content="https://lopesloro.github.io/li-hair-heliopolis/assets/img/og.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23a52a5b'/%3E%3Ctext x='32' y='43' font-family='Georgia,serif' font-size='30' fill='%23fff' text-anchor='middle'%3ELH%3C/text%3E%3C/svg%3E">
-<link rel="preload" href="assets/fonts/instrument-serif.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" as="image" href="assets/img/hero-loiro-810.webp" imagesrcset="assets/img/hero-loiro-480.webp 480w, assets/img/hero-loiro-640.webp 640w, assets/img/hero-loiro-810.webp 810w" imagesizes="(min-width: 960px) 40vw, 88vw" fetchpriority="high">
-<script>document.documentElement.classList.add('js-reveal')</script>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23a52a5b'/%3E%3Ctext x='32' y='42' font-family='Georgia,serif' font-size='26' letter-spacing='2' fill='%23fff' text-anchor='middle'%3ELH%3C/text%3E%3C/svg%3E">
+<link rel="preload" href="assets/fonts/cormorant-garamond-latin-300-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/eb-garamond-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" as="image" href="assets/img/hero-loiro-810.webp" fetchpriority="high">
+<script>document.documentElement.classList.add('js')</script>
 <style>
-@font-face{font-family:"Instrument Serif";src:url(assets/fonts/instrument-serif.woff2) format("woff2");font-weight:400;font-style:normal;font-display:swap}
-@font-face{font-family:"Instrument Serif";src:url(assets/fonts/instrument-serif-italic.woff2) format("woff2");font-weight:400;font-style:italic;font-display:swap}
-@font-face{font-family:"Hanken Grotesk";src:url(assets/fonts/hanken-grotesk-var.woff2) format("woff2");font-weight:400 700;font-style:normal;font-display:swap}
-/* fallback ajustada: a serifa do sistema ocupa a mesma largura enquanto a fonte carrega */
-@font-face{font-family:"Serifa fallback";src:local("Georgia");size-adjust:76%;ascent-override:105%;descent-override:26%;line-gap-override:0%}
+@font-face{font-family:"Cormorant Garamond";src:url(assets/fonts/cormorant-garamond-latin-300-normal.woff2) format("woff2");font-weight:300;font-display:swap}
+@font-face{font-family:"Cormorant Garamond";src:url(assets/fonts/cormorant-garamond-latin-400-normal.woff2) format("woff2");font-weight:400;font-display:swap}
+@font-face{font-family:"EB Garamond";src:url(assets/fonts/eb-garamond-latin-400-normal.woff2) format("woff2");font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:"EB Garamond";src:url(assets/fonts/eb-garamond-latin-400-italic.woff2) format("woff2");font-weight:400;font-style:italic;font-display:swap}
 
 :root{
-  --paper:#f6efe9;
-  --paper-2:#efe2d9;
-  --card:#fffaf6;
-  --ink:#241a1d;
-  --ink-soft:#5b484d;
-  --rosa:#a52a5b;
-  --rosa-deep:#7c1e44;
-  --blush:#e8c7d1;
-  --line:rgba(36,26,29,.14);
-  --serif:"Instrument Serif","Serifa fallback",Georgia,serif;
-  --sans:"Hanken Grotesk",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
-  --gutter:clamp(20px,5vw,56px);
-  --max:1180px;
-  --bar:76px;
+  /* base do Dialeto B + cores da marca Li Hair no lugar do dourado e do oliva */
+  --cream:#FAF2EC; --cream-alt:#F4E9E0;
+  --ink:#241A1D; --ink-soft:#5B484D;
+  --rosa:#A52A5B; --rosa-deep:#7C1E44; --blush:#E8C7D1;
+  --line:#C9BCB0;
+  --display:"Cormorant Garamond",Georgia,serif;
+  --body:"EB Garamond",Georgia,serif;
+  --container:1180px; --pad:40px; --gap:140px; --bar:0px;
 }
-*,*::before,*::after{box-sizing:border-box}
-html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
-@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
-body{margin:0;background:var(--paper);color:var(--ink);font:400 1.0625rem/1.6 var(--sans);padding-bottom:calc(var(--bar) + env(safe-area-inset-bottom,0px))}
-img{display:block;max-width:100%;height:auto}
-a{color:inherit}
-h1,h2,h3{font-family:var(--serif);font-weight:400;line-height:1.02;letter-spacing:-.01em;margin:0}
-p{margin:0}
-em{font-style:italic;color:var(--rosa)}
-.wrap{width:100%;max-width:var(--max);margin-inline:auto;padding-inline:var(--gutter)}
-.skip{position:absolute;left:12px;top:-60px;background:var(--ink);color:#fff;padding:10px 14px;border-radius:8px;z-index:50}
-.skip:focus{top:12px}
-:focus-visible{outline:3px solid var(--rosa);outline-offset:3px}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth;scroll-padding-top:88px}
+body{background:var(--cream);color:var(--ink);font-family:var(--body);font-size:20px;line-height:1.7;-webkit-font-smoothing:antialiased;padding-bottom:var(--bar)}
+img,iframe{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+ul{list-style:none}
+:focus-visible{outline:2px solid var(--rosa);outline-offset:4px}
+.skip{position:absolute;left:16px;top:-80px;z-index:100;background:var(--ink);color:var(--cream);padding:12px 20px}
+.skip:focus{top:16px}
+.wrap{max-width:var(--container);margin:0 auto;padding:0 var(--pad)}
+section{padding:var(--gap) 0}
 
-.eyebrow{font:600 .78rem/1.2 var(--sans);letter-spacing:.16em;text-transform:uppercase;color:var(--rosa)}
-.section{padding-block:clamp(64px,11vw,128px)}
-.section__head{display:grid;gap:14px;margin-bottom:clamp(32px,5vw,56px);max-width:40rem}
-.section__head h2{font-size:clamp(2.4rem,8vw,4.2rem)}
-.section__head p{color:var(--ink-soft)}
+h1,h2,h3,.caps{font-family:var(--display);font-weight:300;text-transform:uppercase;letter-spacing:.14em;line-height:1.25}
+h2{font-size:clamp(30px,3.6vw,44px);text-align:center}
+.lede{max-width:60ch;margin:44px auto 0;text-align:center;color:var(--ink-soft)}
+.prose{max-width:64ch;margin:64px auto 0}
+.prose p{margin-bottom:1.3em}
 
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:0 24px;border-radius:999px;font:600 1rem/1 var(--sans);text-decoration:none;transition:background-color .2s,color .2s,border-color .2s}
-.btn svg{width:20px;height:20px;flex:none}
-.btn--rosa{background:var(--rosa);color:#fff}
-.btn--rosa:hover{background:var(--rosa-deep)}
-.btn--line{border:1.5px solid var(--ink);color:var(--ink)}
-.btn--line:hover{background:var(--ink);color:var(--paper)}
+/* link com sublinhado animado */
+.ul{position:relative;color:var(--rosa);padding-bottom:3px}
+.ul::after{content:"";position:absolute;left:0;right:0;bottom:0;height:1px;background:currentColor;transform:scaleX(.35);transform-origin:left;transition:transform .32s ease}
+.ul:hover::after,.ul:focus-visible::after{transform:scaleX(1)}
 
-/* topo */
-.top{padding-top:calc(14px + env(safe-area-inset-top,0px))}
-.top .wrap{display:flex;align-items:center;justify-content:space-between;min-height:56px}
-.brand{display:flex;align-items:baseline;gap:10px;text-decoration:none}
-.brand b{font:400 1.9rem/1 var(--serif)}
-.brand span{font-size:.8rem;color:var(--ink-soft)}
-.top nav{display:none}
-.top nav a{text-decoration:none;font-size:.95rem;color:var(--ink-soft)}
-.top nav a:hover{color:var(--ink)}
-.top nav .btn{color:#fff;min-height:44px;padding:0 20px}
+/* pílulas */
+.pill{display:inline-block;font-family:var(--display);font-weight:400;text-transform:uppercase;letter-spacing:.18em;font-size:17px;line-height:1.3;padding:18px 52px;border:1px solid var(--ink);border-radius:999px;transition:background .4s,color .4s}
+.pill:hover{background:var(--ink);color:var(--cream)}
+.pill.on-photo{border-color:#fff;color:#fff}
+.pill.on-photo:hover{background:#fff;color:var(--ink)}
 
-/* hero */
-.hero{padding-block:clamp(20px,4vw,40px) clamp(56px,9vw,112px);overflow-x:clip}
-.hero .wrap{display:grid;gap:32px}
-.hero__place{font-size:.9rem;color:var(--ink-soft)}
-.hero h1{font-size:clamp(3.1rem,13.5vw,6.4rem);margin-top:14px}
-.hero h1 small{display:block;font-size:.42em;line-height:1.15;color:var(--ink-soft);margin-top:14px;letter-spacing:0}
-.hero__lead{margin-top:22px;max-width:34rem;font-size:1.125rem}
-.hero__actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
-.rating{display:inline-flex;align-items:center;gap:10px;margin-top:26px;font-size:.95rem;text-decoration:none;color:var(--ink-soft)}
-.rating strong{color:var(--ink);font-weight:700}
-.stars{color:var(--rosa);letter-spacing:2px}
-.hero__media{position:relative;justify-self:center;width:min(100%,460px)}
-.hero__media::before{content:"";position:absolute;inset:-18px -18px auto auto;width:78%;aspect-ratio:1;border:1.5px solid var(--blush);border-radius:50%;z-index:0}
-.arch{position:relative;z-index:1;border-radius:999px 999px 20px 20px;overflow:hidden;background:var(--paper-2)}
-.arch img{width:100%;height:100%;object-fit:cover}
-.hero__media .arch{aspect-ratio:5/6}
-.hero__tag{position:absolute;z-index:2;left:-6px;bottom:22px;background:var(--card);border-radius:14px;padding:10px 14px;font-size:.85rem;box-shadow:0 10px 30px rgba(36,26,29,.12)}
-.hero__tag b{display:block;font:400 1.25rem/1.1 var(--serif)}
+/* header */
+.header{position:fixed;top:0;left:0;right:0;z-index:50;color:#fff;transition:background .35s,color .35s,box-shadow .35s}
+.header .wrap{display:flex;align-items:center;height:96px;gap:40px}
+.header.solid{background:var(--cream);color:var(--ink);box-shadow:0 1px 0 var(--line)}
+.logo{font-family:var(--display);font-weight:400;font-size:30px;letter-spacing:.16em;text-transform:uppercase;white-space:nowrap}
+.nav{margin-left:auto;display:flex;gap:34px;font-family:var(--display);font-size:16px;letter-spacing:.18em;text-transform:uppercase}
+.nav a{position:relative;padding-bottom:6px}
+.nav a::after{content:"";position:absolute;left:0;right:0;bottom:0;height:1px;background:currentColor;transform:scaleX(0);transform-origin:left;transition:transform .32s ease}
+.nav a:hover::after{transform:scaleX(1)}
 
-/* método */
-.metodo{background:var(--ink);color:var(--paper)}
-.metodo .eyebrow{color:var(--blush)}
-.metodo .section__head p{color:#d9cbc6}
-.metodo em{color:var(--blush)}
-.steps{list-style:none;margin:56px 0 0;padding:0;display:grid;gap:0;counter-reset:s}
-.steps li{display:grid;grid-template-columns:auto 1fr;gap:6px 18px;padding:24px 0;border-top:1px solid rgba(246,239,233,.18)}
-.steps li::before{counter-increment:s;content:"0" counter(s);grid-row:span 2;font:400 2.2rem/1 var(--serif);color:var(--blush)}
-.steps h3{font-size:1.7rem}
-.steps p{color:#d9cbc6}
-.quote{margin:48px 0 0;padding:0;max-width:46rem}
-.quote p{font:400 clamp(1.7rem,5.6vw,2.7rem)/1.18 var(--serif)}
-.quote footer{margin-top:16px;font-size:.9rem;color:#d9cbc6}
+/* hero: tríptico de fotos verticais no desktop, uma foto no celular */
+.hero{position:relative;height:100vh;height:100svh;min-height:600px;display:grid;place-items:center;text-align:center;color:#fff;overflow:hidden;padding:0}
+.hero .media{position:absolute;inset:0;display:grid;grid-template-columns:repeat(3,1fr);animation:kenburns 24s ease-out forwards}
+.hero .media img{width:100%;height:100%;object-fit:cover}
+.hero .media img:nth-child(1){object-position:50% 40%}
+@keyframes kenburns{from{transform:scale(1)}to{transform:scale(1.08)}}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(36,26,29,.36),rgba(36,26,29,.56))}
+.hero .inner{position:relative;z-index:2;padding:0 24px}
+.hero h1{font-size:clamp(48px,7vw,84px);animation:open 1.4s cubic-bezier(.22,.61,.36,1) .3s both}
+@keyframes open{from{letter-spacing:.26em;opacity:0}to{letter-spacing:.14em;opacity:1}}
+@keyframes fade{from{opacity:0}to{opacity:1}}
+.hero .sub{max-width:44ch;margin:26px auto 48px;font-size:22px;animation:fade 1.4s ease .6s both}
+.hero .pill{animation:fade 1.4s ease .8s both}
+.chev{position:absolute;bottom:40px;left:50%;margin-left:-20px;z-index:2;width:40px;height:40px;animation:chev 2.2s ease-in-out infinite}
+.chev::before{content:"";display:block;width:22px;height:22px;margin:0 auto;border-right:1px solid #fff;border-bottom:1px solid #fff;transform:rotate(45deg)}
+@keyframes chev{0%,100%{transform:translateY(0)}50%{transform:translateY(10px)}}
 
-/* resultados */
-.gallery{list-style:none;margin:0;padding:0 var(--gutter) 8px;display:grid;grid-auto-flow:column;grid-auto-columns:72%;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-padding-inline:var(--gutter);-webkit-overflow-scrolling:touch}
-.gallery li{scroll-snap-align:start}
-.gallery figure{margin:0}
-.gallery .ph{aspect-ratio:4/5;border-radius:18px;overflow:hidden;background:var(--paper-2)}
-.gallery img{width:100%;height:100%;object-fit:cover}
-.gallery figcaption{margin-top:10px;font-size:.95rem}
-.gallery figcaption span{display:block;font-size:.8rem;color:var(--ink-soft)}
-.gallery-note{margin-top:18px;font-size:.85rem;color:var(--ink-soft)}
+/* manifesto */
+.quote{max-width:46ch;margin:56px auto 0;text-align:center;font-style:italic;font-size:22px}
+.quote cite{display:block;margin-top:14px;font-style:normal;font-size:17px;color:var(--ink-soft)}
+.awards{display:grid;grid-template-columns:1fr 1fr;gap:56px;max-width:820px;margin:80px auto 0;text-align:center;border-top:1px solid var(--line);padding-top:48px}
+.awards em{display:block;margin-top:4px;color:var(--ink-soft)}
+.awards .big{font-family:var(--display);font-weight:300;font-size:44px;line-height:1.1;letter-spacing:.08em}
+
+/* banners */
+.banner{position:relative;height:100vh;height:100svh;min-height:560px;display:grid;place-items:center;text-align:center;color:#fff;padding:0;overflow:hidden}
+.banner .media{position:absolute;inset:0;display:grid;grid-auto-flow:column;grid-auto-columns:1fr}
+.banner .media img{width:100%;height:100%;object-fit:cover}
+.banner::after{content:"";position:absolute;inset:0;background:rgba(36,26,29,.4)}
+.banner .inner{position:relative;z-index:2;padding:0 24px}
+.banner h2{color:#fff;font-size:clamp(34px,5.2vw,62px)}
+.banner .sub{font-style:italic;font-size:22px;margin:22px 0 44px}
+
+/* carrossel com peek */
+.carousel{padding:var(--gap) 0;overflow:hidden;background:var(--cream-alt)}
+.carousel h2{margin-bottom:64px}
+.car-wrap{position:relative;max-width:1600px;margin:0 auto}
+.track{display:flex;transition:transform .65s cubic-bezier(.6,0,.2,1)}
+.slide{flex:0 0 38%;padding:0 10px}
+.slide img{width:100%;aspect-ratio:4/5;object-fit:cover;opacity:.45;transition:opacity .65s cubic-bezier(.6,0,.2,1)}
+.slide.is-active img{opacity:1}
+.slide p{margin-top:18px;text-align:center;font-family:var(--display);text-transform:uppercase;letter-spacing:.18em;font-size:16px;opacity:0;transition:opacity .65s}
+.slide.is-active p{opacity:1}
+.car-btn{position:absolute;top:44%;transform:translateY(-50%);z-index:5;background:none;border:0;cursor:pointer;padding:24px;color:#fff;font-family:var(--display);font-weight:300;font-size:72px;line-height:1;text-shadow:0 1px 14px rgba(0,0,0,.55)}
+.car-btn.prev{left:calc(31% - 12px)}.car-btn.next{right:calc(31% - 12px)}
+.car-btn:disabled{opacity:.3;cursor:default}
+.car-note{margin-top:40px;text-align:center;font-style:italic;font-size:17px;color:var(--ink-soft)}
 
 /* serviços */
-.servicos{background:var(--paper-2)}
-.menu{display:grid;gap:40px}
-.menu h3{font-size:2.2rem;padding-bottom:12px;border-bottom:1.5px solid var(--ink)}
-.menu ul{list-style:none;margin:0;padding:0}
-.menu li{display:grid;grid-template-columns:1fr auto;align-items:center;gap:4px 16px;padding:18px 0;border-bottom:1px solid var(--line)}
-.menu li strong{font-weight:600;font-size:1.08rem}
-.menu li p{grid-column:1;font-size:.95rem;color:var(--ink-soft)}
-.menu li a{grid-row:1/span 2;grid-column:2;display:inline-flex;align-items:center;min-height:44px;padding:0 16px;border-radius:999px;border:1.5px solid var(--rosa);color:var(--rosa);font-weight:600;font-size:.9rem;text-decoration:none;white-space:nowrap}
-.menu li a:hover{background:var(--rosa);color:#fff}
-.combo{margin-top:40px;display:grid;gap:6px;background:var(--card);border-radius:20px;padding:24px}
-.combo b{font:400 1.6rem/1.1 var(--serif)}
-.combo p{color:var(--ink-soft)}
+.services{display:grid;grid-template-columns:1fr 1fr;gap:72px;margin-top:96px}
+.services h3{font-size:30px;text-align:center;padding-bottom:22px;border-bottom:1px solid var(--line)}
+.services li{padding:28px 0;border-bottom:1px solid var(--line);display:grid;grid-template-columns:1fr auto;gap:4px 24px;align-items:baseline}
+.services li strong{font-family:var(--display);font-weight:400;text-transform:uppercase;letter-spacing:.14em;font-size:19px}
+.services li span{grid-column:1;color:var(--ink-soft)}
+.services li .ul{grid-column:2;grid-row:1/3;align-self:center;font-family:var(--display);text-transform:uppercase;letter-spacing:.18em;font-size:15px}
+.note{max-width:52ch;margin:64px auto 0;text-align:center;font-style:italic}
 
-/* sobre */
-.sobre .wrap{display:grid;gap:40px;align-items:center}
-.sobre__media .arch{aspect-ratio:4/5;max-width:440px}
-.sobre h2{font-size:clamp(2.6rem,9vw,4.4rem)}
-.sobre__role{margin-top:12px;font:400 1.5rem/1.2 var(--serif);color:var(--rosa)}
-.sobre ul{list-style:none;margin:28px 0 0;padding:0;display:grid;gap:14px}
-.sobre li{position:relative;padding-left:28px}
-.sobre li::before{content:"";position:absolute;left:0;top:.62em;width:14px;height:1.5px;background:var(--rosa)}
-.sobre__src{margin-top:18px;font-size:.85rem;color:var(--ink-soft)}
-.badges{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}
-.badges span{border:1px solid var(--line);background:var(--card);border-radius:999px;padding:8px 14px;font-size:.88rem}
+/* quem cuida */
+.bio{columns:1}
+.seals{display:grid;grid-template-columns:1fr 1fr;gap:56px;max-width:820px;margin:72px auto 0;text-align:center;border-top:1px solid var(--line);padding-top:44px}
+
+/* galeria irregular sobre o vinho da marca */
+.gallery{background:var(--rosa-deep);padding:var(--gap) 0}
+.grid{display:grid;grid-template-columns:repeat(6,1fr);gap:24px}
+.grid figure{overflow:hidden}
+.grid img{width:100%;height:100%;object-fit:cover;transition:transform .9s ease}
+.grid figure:hover img{transform:scale(1.04)}
+.g1{grid-column:span 2;grid-row:span 2}
+.g2{grid-column:span 4;aspect-ratio:16/10}
+.g3,.g4{grid-column:span 2;aspect-ratio:1}
+.g5{grid-column:span 6;aspect-ratio:21/8}
 
 /* avaliações */
-.prova{background:var(--card)}
-.score{display:flex;align-items:flex-end;gap:18px;margin-bottom:36px}
-.score b{font:400 clamp(5rem,20vw,8rem)/.8 var(--serif)}
-.score p{padding-bottom:6px;color:var(--ink-soft)}
-.score .stars{display:block;font-size:1.3rem}
-.prova__grid{display:grid;gap:18px}
-.reviews{display:grid;gap:18px}
-.review{margin:0;background:var(--paper);border-radius:20px;padding:26px}
-.review blockquote{margin:0;font:400 1.45rem/1.3 var(--serif)}
-.review figcaption{margin-top:16px;font-size:.9rem;color:var(--ink-soft)}
-.review figcaption b{color:var(--ink);font-weight:600}
-.prova__photo{margin:0}
-.prova__photo .ph{border-radius:20px;overflow:hidden;aspect-ratio:4/5;background:var(--paper-2)}
-.prova__photo img{width:100%;height:100%;object-fit:cover}
-.prova__photo figcaption{margin-top:10px;font-size:.85rem;color:var(--ink-soft)}
-.link-arrow{display:inline-flex;margin-top:26px;font-weight:600;color:var(--rosa);text-underline-offset:4px}
+.score{text-align:center;margin-top:56px}
+.score .big{font-family:var(--display);font-weight:300;font-size:84px;line-height:1;letter-spacing:.06em}
+.score em{display:block;margin-top:8px;color:var(--ink-soft)}
+.reviews{display:grid;grid-template-columns:repeat(3,1fr);gap:56px;margin-top:88px}
+.reviews blockquote{text-align:center;font-style:italic;line-height:1.65}
+.reviews cite{display:block;margin-top:22px;font-style:normal;font-family:var(--display);text-transform:uppercase;letter-spacing:.18em;font-size:15px;color:var(--ink-soft)}
+.center{text-align:center;margin-top:72px}
 
-/* visita */
-.visita__card{display:grid;gap:26px;background:var(--ink);color:var(--paper);border-radius:28px;padding:clamp(26px,5vw,56px)}
-.visita__card h2{font-size:clamp(2.4rem,8vw,4rem);margin-top:14px}
-.visita__card .eyebrow{color:var(--blush)}
-.visita__card em{color:var(--blush)}
-.info{display:grid;gap:18px;margin:0}
-.info div{border-top:1px solid rgba(246,239,233,.18);padding-top:14px}
-.info dt{font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;color:var(--blush)}
-.info dd{margin:6px 0 0;font-size:1.1rem}
-.info a{text-underline-offset:3px}
-.visita__actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
-.visita__card .btn--line{border-color:var(--paper);color:var(--paper)}
-.visita__card .btn--line:hover{background:var(--paper);color:var(--ink)}
+/* localização */
+.location{position:relative;color:#fff;text-align:center;overflow:hidden}
+.location>img.bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.location::after{content:"";position:absolute;inset:0;background:rgba(36,26,29,.72)}
+.location .wrap{position:relative;z-index:2}
+.location h2{color:#fff}
+.location .map{margin:56px 0 52px;aspect-ratio:21/9;background:var(--cream-alt)}
+.location .map iframe{width:100%;height:100%;border:0;filter:grayscale(.35)}
+.location .ul{color:var(--blush)}
+.info{display:grid;grid-template-columns:repeat(3,1fr);gap:40px}
+.info h3{font-size:22px;margin-bottom:12px}
+.location .pill{margin-top:64px}
 
-/* fechamento */
-.final{text-align:center}
-.final h2{font-size:clamp(2.8rem,11vw,5.6rem);max-width:14ch;margin-inline:auto}
-.final p{margin:18px auto 30px;max-width:30rem;color:var(--ink-soft)}
+footer{padding:48px 0;text-align:center;font-size:16px;color:var(--ink-soft);border-top:1px solid var(--line)}
+footer p+p{margin-top:6px;font-style:italic}
 
-.foot{border-top:1px solid var(--line);padding-block:28px;font-size:.85rem;color:var(--ink-soft)}
-.foot .wrap{display:grid;gap:8px}
+/* barra fixa no celular: retângulo sólido do dialeto */
+.actionbar{display:none}
 
-/* barra de ação mobile */
-.actionbar{position:fixed;left:0;right:0;bottom:0;z-index:40;display:grid;grid-template-columns:1fr auto;gap:10px;padding:10px 14px calc(10px + env(safe-area-inset-bottom,0px));background:rgba(246,239,233,.96);border-top:1px solid var(--line);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px)}
-.actionbar .btn{min-height:52px;padding:0 18px}
+/* reveal */
+.js .reveal{opacity:0;transform:translateY(16px);transition:opacity .8s ease-out,transform .8s ease-out}
+.js .reveal.in{opacity:1;transform:none}
 
-/* reveal: só quando o JS está ativo */
-.js-reveal [data-reveal]{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease}
-.js-reveal [data-reveal].is-in{opacity:1;transform:none}
-@media (prefers-reduced-motion:reduce){.js-reveal [data-reveal]{opacity:1;transform:none;transition:none}}
-
-@media (min-width:720px){
-  .gallery{grid-auto-columns:40%}
-  .reviews{grid-template-columns:repeat(3,1fr)}
-  .info{grid-template-columns:repeat(3,1fr)}
+@media (max-width:860px){
+  :root{--pad:24px;--gap:80px;--bar:64px}
+  body{font-size:19px}
+  .nav{display:none}
+  .header .wrap{height:72px}
+  .logo{font-size:24px}
+  .hero .media{grid-template-columns:1fr}
+  .hero .media img:not(:first-child){display:none}
+  .hero .sub{font-size:20px}
+  .banner .media img:not(:first-child){display:none}
+  .awards,.seals{grid-template-columns:1fr;gap:32px}
+  /* carrossel: scroll nativo com snap, o peek vem de graça */
+  .track{overflow-x:auto;scroll-snap-type:x mandatory;transform:none!important;padding:0 6%;scrollbar-width:none}
+  .track::-webkit-scrollbar{display:none}
+  .slide{flex-basis:80%;scroll-snap-align:center;padding:0 6px}
+  .slide img{opacity:1}
+  .slide p{opacity:1}
+  .car-btn{display:none}
+  .services{grid-template-columns:1fr;gap:64px;margin-top:72px}
+  .services li strong{font-size:17px}
+  .grid{grid-template-columns:repeat(2,1fr);gap:12px}
+  .g1,.g2,.g3,.g4,.g5{grid-column:span 2;grid-row:auto;aspect-ratio:4/3}
+  .g3,.g4{grid-column:span 1;aspect-ratio:1}
+  .score .big{font-size:62px}
+  .reviews{grid-template-columns:1fr;gap:48px;margin-top:64px}
+  .info{grid-template-columns:1fr;gap:32px}
+  .location .map{aspect-ratio:4/3}
+  .pill{padding:16px 32px}
+  footer{padding-bottom:32px}
+  .actionbar{display:grid;grid-template-columns:1fr 1fr;position:fixed;left:0;right:0;bottom:0;z-index:60;background:rgba(36,26,29,.94);color:var(--cream);padding-bottom:env(safe-area-inset-bottom,0px)}
+  .actionbar a{height:64px;display:grid;place-items:center;font-family:var(--display);text-transform:uppercase;letter-spacing:.18em;font-size:15px}
+  .actionbar a+a{border-left:1px solid rgba(250,242,236,.2)}
 }
-@media (min-width:960px){
-  :root{--bar:0px}
-  .actionbar{display:none}
-  .top nav{display:flex;gap:28px;align-items:center}
-  .hero .wrap{grid-template-columns:1.05fr .95fr;align-items:center;gap:64px}
-  .hero__media{justify-self:end;width:min(100%,520px)}
-  .steps{grid-template-columns:repeat(3,1fr);gap:40px}
-  .steps li{grid-template-columns:1fr;padding-top:28px}
-  .steps li::before{grid-row:auto;margin-bottom:10px}
-  .metodo__grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:64px;align-items:end}
-  .metodo .section__head{margin-bottom:0}
-  .quote{margin-top:0}
-  .gallery{grid-auto-flow:row;grid-template-columns:repeat(3,1fr);grid-auto-columns:auto;overflow:visible;padding:0;max-width:var(--max);margin-inline:auto;gap:22px}
-  .gallery-wrap{padding-inline:var(--gutter)}
-  .menu{grid-template-columns:1fr 1fr;gap:64px}
-  .sobre .wrap{grid-template-columns:.9fr 1.1fr;gap:80px}
-  .prova__grid{grid-template-columns:.75fr 2fr;gap:28px;align-items:start}
-  .reviews{grid-template-columns:1fr 1fr}
-  .reviews .review:first-child{grid-column:1/-1}
-  .visita__card{grid-template-columns:.75fr 1.6fr;align-items:start;gap:56px}
-  .info{grid-template-columns:1.25fr 1fr 1fr}
+@media (max-width:420px){ .logo{letter-spacing:.14em} .pill{letter-spacing:.14em;padding:16px 26px;font-size:16px} }
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .js .reveal{opacity:1;transform:none}
 }
 </style>
 </head>
 <body>
 <a class="skip" href="#conteudo">Pular para o conteúdo</a>
 
-<header class="top">
+<header class="header" id="header">
   <div class="wrap">
-    <a class="brand" href="#inicio"><b>Li Hair</b><span>Vila Heliópolis</span></a>
-    <nav aria-label="Principal">
-      <a href="#metodo">Como funciona</a>
-      <a href="#servicos">Serviços</a>
-      <a href="#sobre">Quem cuida</a>
-      <a href="#visita">Visite</a>
-      <a class="btn btn--rosa" href="https://wa.me/5511984160096?text=Ol%C3%A1%2C%20Li!%20Vi%20a%20p%C3%A1gina%20do%20sal%C3%A3o%20e%20quero%20agendar%20um%20hor%C3%A1rio." target="_blank" rel="noopener">Agendar</a>
+    <a class="logo" href="#inicio">Li Hair</a>
+    <nav class="nav" aria-label="Principal">
+      <a href="#servicos">Serviços</a><a href="#resultados">Resultados</a><a href="#quem-cuida">Quem cuida</a><a href="#visite">Visite</a>
     </nav>
   </div>
 </header>
 
 <main id="conteudo">
+<section class="hero" id="inicio">
+  <div class="media">
+    <img src="assets/img/hero-loiro-810.webp" alt="Cliente de costas na cadeira do salão com cabelo longo loiro e ondulado" fetchpriority="high">
+    <img src="assets/img/cachos-luzes-720.webp" alt="" loading="lazy">
+    <img src="assets/img/liso-720.webp" alt="" loading="lazy">
+  </div>
+  <div class="inner">
+    <h1>Li Hair</h1>
+    <p class="sub">Loiros, lisos e tratamentos com saúde para os fios, na Vila Heliópolis.</p>
+    <a class="pill on-photo" href="https://wa.me/5511984160096?text=Ol%C3%A1%2C%20Li!%20Vi%20a%20p%C3%A1gina%20do%20sal%C3%A3o%20e%20quero%20agendar%20um%20hor%C3%A1rio.">Agendar pelo WhatsApp</a>
+  </div>
+  <div class="chev" aria-hidden="true"></div>
+</section>
 
-  <section class="hero" id="inicio">
-    <div class="wrap">
+<section class="reveal">
+  <div class="wrap">
+    <h2>Você não precisa desistir<br>do loiro porque seu cabelo<br>está fragilizado</h2>
+    <p class="lede">Antes de pensar na cor, a Li pensa no que o seu fio consegue suportar. Loiros, alisamentos e tratamentos feitos com calma, técnica e cuidado.</p>
+    <blockquote class="quote">“O meu trabalho é encontrar o equilíbrio entre o cabelo que você deseja e o cabelo que o seu fio consegue receber.”<cite>Liliane Barbosa, <a class="ul" href="https://www.instagram.com/lili_hairr/">@lili_hairr</a></cite></blockquote>
+    <div class="awards">
+      <div><span class="big">4,9</span><em>nota no Google, com 68 avaliações</em></div>
+      <div><span class="big">Ter a Sáb</span><em>das 10h às 19h, na Vila Heliópolis</em></div>
+    </div>
+  </div>
+</section>
+
+<section class="banner" aria-label="Como funciona">
+  <div class="media">
+    <img src="assets/img/morena-iluminada-900.webp" alt="" loading="lazy">
+    <img src="assets/img/vermelho-810.webp" alt="" loading="lazy">
+  </div>
+  <div class="inner">
+    <h2>Liso não é sorte.<br>É técnica.</h2>
+    <p class="sub">E loiro bonito começa antes da tinta.</p>
+    <a class="pill on-photo" href="#servicos">Como funciona</a>
+  </div>
+</section>
+
+<div class="carousel" id="resultados">
+  <h2 class="reveal">Feito aqui, na cadeira<br>da Li Hair</h2>
+  <div class="car-wrap">
+    <button class="car-btn prev" aria-label="Foto anterior">&#8249;</button>
+    <ul class="track" id="track">
+      <li class="slide"><img src="assets/img/cachos-luzes-720.webp" alt="Cabelo cacheado com luzes loiras, visto de costas" loading="lazy"><p>Cachos com luzes</p></li>
+      <li class="slide"><img src="assets/img/morena-iluminada-900.webp" alt="Cabelo castanho em camadas com mechas iluminadas" loading="lazy"><p>Morena iluminada</p></li>
+      <li class="slide"><img src="assets/img/hero-loiro-810.webp" alt="Cabelo longo loiro e ondulado, visto de costas" loading="lazy"><p>Loiro</p></li>
+      <li class="slide"><img src="assets/img/liso-720.webp" alt="Cabelo castanho escuro longo e liso com brilho" loading="lazy"><p>Liso com brilho</p></li>
+      <li class="slide"><img src="assets/img/vermelho-810.webp" alt="Cabelo liso na altura das costas em tom vermelho intenso" loading="lazy"><p>Vermelho</p></li>
+    </ul>
+    <button class="car-btn next" aria-label="Próxima foto">&#8250;</button>
+  </div>
+  <p class="car-note">Fotos publicadas pelo próprio salão no Google e no Instagram.</p>
+</div>
+
+<section id="servicos" class="reveal">
+  <div class="wrap">
+    <h2>A gente não alisa<br>por alisar</h2>
+    <div class="prose">
+      <p>Tudo começa pela análise do fio. Antes da cor ou do liso, a Li avalia o que o seu cabelo consegue receber hoje, e só depois decide o caminho.</p>
+      <p>O produto é escolhido para a estrutura do seu cabelo. Não é só passar produto e pronto: cada fio pede uma química diferente, e respeitar isso é o que mantém o brilho.</p>
+      <p>A técnica acompanha cada etapa. Aplicado da forma correta, o resultado fica alinhado, com brilho e saudável de verdade.</p>
+      <p>Toque em Consultar e a conversa no WhatsApp já abre com o serviço escrito.</p>
+    </div>
+    <div class="services">
       <div>
-        <p class="hero__place">Salão de beleza da Liliane Barbosa · Vila Heliópolis, São Paulo</p>
-        <h1>Você não precisa desistir do <em>loiro</em><small>porque seu cabelo está fragilizado.</small></h1>
-        <p class="hero__lead">Antes de pensar na cor, a Li pensa no que o seu fio consegue suportar. Loiros, alisamentos e tratamentos com saúde para os fios.</p>
-        <div class="hero__actions">
-          <a class="btn btn--rosa" href="https://wa.me/5511984160096?text=Ol%C3%A1%2C%20Li!%20Vi%20a%20p%C3%A1gina%20do%20sal%C3%A3o%20e%20quero%20agendar%20um%20hor%C3%A1rio." target="_blank" rel="noopener">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2c0 1.3.9 2.5 1 2.7.1.2 1.9 2.9 4.6 4 1.7.7 2.4.8 3.2.7.5-.1 1.5-.6 1.8-1.2.2-.6.2-1.1.1-1.2l-.5-.3Z"/></svg>
-            Agendar pelo WhatsApp
-          </a>
-          <a class="btn btn--line" href="#servicos">Ver serviços</a>
-        </div>
-        <a class="rating" href="https://maps.google.com/?cid=9302495675956941608" target="_blank" rel="noopener">
-          <span class="stars" aria-hidden="true">★★★★★</span>
-          <span><strong>4,9 no Google</strong> · 68 avaliações</span>
-        </a>
-      </div>
-      <div class="hero__media">
-        <div class="arch">
-          <img src="assets/img/hero-loiro-810.webp" srcset="assets/img/hero-loiro-480.webp 480w, assets/img/hero-loiro-640.webp 640w, assets/img/hero-loiro-810.webp 810w" sizes="(min-width: 960px) 40vw, 88vw" width="810" height="972" alt="Cliente de costas na cadeira do salão com cabelo longo loiro e ondulado" fetchpriority="high">
-        </div>
-        <p class="hero__tag"><b>Loiros · Lisos</b>Tratamentos</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="section metodo" id="metodo">
-    <div class="wrap">
-      <div class="metodo__grid">
-        <div class="section__head" data-reveal>
-          <p class="eyebrow">Como funciona</p>
-          <h2>A gente não alisa por alisar. <em>Transforma com responsabilidade.</em></h2>
-          <p>Liso perfeito não é sorte, é técnica. E loiro bonito começa antes da tinta.</p>
-        </div>
-        <blockquote class="quote" data-reveal>
-          <p>“O meu trabalho é encontrar o equilíbrio entre o cabelo que você deseja e o cabelo que o seu fio consegue receber.”</p>
-          <footer>Liliane Barbosa, no Instagram @lili_hairr</footer>
-        </blockquote>
-      </div>
-      <ol class="steps">
-        <li data-reveal><h3>Análise do fio</h3><p>Antes da cor ou do liso, a Li avalia o que o seu cabelo consegue receber hoje.</p></li>
-        <li data-reveal><h3>Produto certo</h3><p>A escolha respeita a estrutura do seu cabelo. Não é só passar produto e pronto.</p></li>
-        <li data-reveal><h3>Técnica em cada etapa</h3><p>Aplicado da forma correta, o resultado fica alinhado, com brilho e saudável de verdade.</p></li>
-      </ol>
-    </div>
-  </section>
-
-  <section class="section" id="resultados" aria-labelledby="resultados-titulo">
-    <div class="wrap">
-      <div class="section__head" data-reveal>
-        <p class="eyebrow">Resultados</p>
-        <h2 id="resultados-titulo">Feito aqui, na cadeira da <em>Li Hair</em>.</h2>
-      </div>
-    </div>
-    <div class="gallery-wrap">
-      <ul class="gallery" tabindex="0" aria-label="Fotos de resultados do salão, deslize para ver mais">
-        <li><figure><div class="ph"><img src="assets/img/cachos-luzes-480.webp" srcset="assets/img/cachos-luzes-480.webp 480w, assets/img/cachos-luzes-640.webp 640w, assets/img/cachos-luzes-720.webp 720w" sizes="(min-width: 960px) 33vw, (min-width: 720px) 40vw, 72vw" width="480" height="608" loading="lazy" decoding="async" alt="Cabelo cacheado com luzes loiras, visto de costas"></div><figcaption>Cachos com luzes<span>Cabelo</span></figcaption></figure></li>
-        <li><figure><div class="ph"><img src="assets/img/liso-480.webp" srcset="assets/img/liso-480.webp 480w, assets/img/liso-640.webp 640w, assets/img/liso-720.webp 720w" sizes="(min-width: 960px) 33vw, (min-width: 720px) 40vw, 72vw" width="480" height="614" loading="lazy" decoding="async" alt="Cabelo castanho escuro longo e liso com brilho"></div><figcaption>Liso com brilho<span>Alisamento</span></figcaption></figure></li>
-        <li><figure><div class="ph"><img src="assets/img/morena-iluminada-480.webp" srcset="assets/img/morena-iluminada-480.webp 480w, assets/img/morena-iluminada-640.webp 640w, assets/img/morena-iluminada-900.webp 900w" sizes="(min-width: 960px) 33vw, (min-width: 720px) 40vw, 72vw" width="480" height="608" loading="lazy" decoding="async" alt="Cabelo castanho em camadas com mechas iluminadas"></div><figcaption>Morena iluminada<span>Cabelo</span></figcaption></figure></li>
-        <li><figure><div class="ph"><img src="assets/img/vermelho-480.webp" srcset="assets/img/vermelho-480.webp 480w, assets/img/vermelho-640.webp 640w, assets/img/vermelho-810.webp 810w" sizes="(min-width: 960px) 33vw, (min-width: 720px) 40vw, 72vw" width="480" height="576" loading="lazy" decoding="async" alt="Cabelo liso na altura das costas em tom vermelho intenso"></div><figcaption>Vermelho<span>Cor</span></figcaption></figure></li>
-        <li><figure><div class="ph"><img src="assets/img/unhas-nude-480.webp" srcset="assets/img/unhas-nude-480.webp 480w, assets/img/unhas-nude-640.webp 640w, assets/img/unhas-nude-720.webp 720w" sizes="(min-width: 960px) 33vw, (min-width: 720px) 40vw, 72vw" width="480" height="563" loading="lazy" decoding="async" alt="Unhas curtas esmaltadas em tom nude rosado"></div><figcaption>Unhas nude<span>Manicure</span></figcaption></figure></li>
-        <li><figure><div class="ph"><img src="assets/img/unhas-escuras-480.webp" srcset="assets/img/unhas-escuras-480.webp 480w, assets/img/unhas-escuras-640.webp 640w, assets/img/unhas-escuras-720.webp 720w" sizes="(min-width: 960px) 33vw, (min-width: 720px) 40vw, 72vw" width="480" height="480" loading="lazy" decoding="async" alt="Unhas esmaltadas em tom vinho escuro"></div><figcaption>Unhas escuras<span>Manicure</span></figcaption></figure></li>
-      </ul>
-    </div>
-    <div class="wrap"><p class="gallery-note">Fotos publicadas pelo próprio salão no Google e no Instagram.</p></div>
-  </section>
-
-  <section class="section servicos" id="servicos" aria-labelledby="servicos-titulo">
-    <div class="wrap">
-      <div class="section__head" data-reveal>
-        <p class="eyebrow">Serviços</p>
-        <h2 id="servicos-titulo">Tudo o que o salão faz, <em>num lugar só</em>.</h2>
-        <p>Toque em “Consultar” para chamar a Li no WhatsApp já com o serviço escrito na mensagem.</p>
-      </div>
-      <div class="menu">
-        <div data-reveal>
-          <h3>Cabelo</h3>
-          <ul>
-            <li><strong>Loiros e luzes</strong><p>A especialidade da casa, pensando no que o fio aguenta.</p><a href="https://wa.me/5511984160096?text=Ol%C3%A1%2C%20Li!%20Quero%20saber%20sobre%20loiros%20e%20luzes." target="_blank" rel="noopener" aria-label="Consultar loiros e luzes no WhatsApp">Consultar</a></li>
-            <li><strong>Morena iluminada</strong><p>Iluminação para cabelo castanho, com saúde para os fios.</p><a href="https://wa.me/5511984160096?text=Ol%C3%A1%2C%20Li!%20Quero%20saber%20sobre%20morena%20iluminada." target="_blank" rel="noopener" aria-label="Consultar morena iluminada no WhatsApp">Consultar</a></li>
-            <li><strong>Alisamentos</strong><p>Liso alinhado e com brilho, com análise do fio antes.</p><a href="https://wa.me/5511984160096?text=Ol%C3%A1%2C%20Li!%20Quero%20saber%20sobre%20alisamento." target="_blank" rel="noopener" aria-label="Consultar alisamentos no WhatsApp">Consultar</a></li>
-            <li><strong>Tratamentos e terapia capilar</strong><p>Para quem passou por uma química que deixou o cabelo fragilizado.</p><a href="https://wa.me/5511984160096?text=Ol%C3%A1%2C%20Li!%20Quero%20saber%20sobre%20tratamento%20para%20o%20cabelo." target="_blank" rel="noopener" aria-label="Consultar tratamentos no WhatsApp">Consultar</a></li>
-          </ul>
-        </div>
-        <div data-reveal>
-          <h3>Beleza</h3>
-          <ul>
-            <li><strong>Manicure e pedicure</strong><p>Pé e mão.</p><a href="https://wa.me/5511984160096?text=Ol%C3%A1%2C%20Li!%20Quero%20agendar%20manicure%20e%20pedicure." target="_blank" rel="noopener" aria-label="Consultar manicure e pedicure no WhatsApp">Consultar</a></li>
-            <li><strong>Design de sobrancelhas</strong><p>Feito no próprio salão.</p><a href="https://wa.me/5511984160096?text=Ol%C3%A1%2C%20Li!%20Quero%20agendar%20design%20de%20sobrancelhas." target="_blank" rel="noopener" aria-label="Consultar design de sobrancelhas no WhatsApp">Consultar</a></li>
-            <li><strong>Depilação</strong><p>Com cera e depilação marroquina.</p><a href="https://wa.me/5511984160096?text=Ol%C3%A1%2C%20Li!%20Quero%20saber%20sobre%20depila%C3%A7%C3%A3o." target="_blank" rel="noopener" aria-label="Consultar depilação no WhatsApp">Consultar</a></li>
-            <li><strong>Make express</strong><p>Maquiagem rápida no salão.</p><a href="https://wa.me/5511984160096?text=Ol%C3%A1%2C%20Li!%20Quero%20agendar%20uma%20make%20express." target="_blank" rel="noopener" aria-label="Consultar make express no WhatsApp">Consultar</a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="combo" data-reveal>
-        <b>Procedimentos simultâneos</b>
-        <p>Dá para fazer mais de um serviço ao mesmo tempo, porque aqui a gente ama otimizar o tempo.</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="section sobre" id="sobre" aria-labelledby="sobre-titulo">
-    <div class="wrap">
-      <div class="sobre__media" data-reveal>
-        <div class="arch">
-          <img src="assets/img/retrato-liliane-800.webp" srcset="assets/img/retrato-liliane-480.webp 480w, assets/img/retrato-liliane-800.webp 800w, assets/img/retrato-liliane-1100.webp 1100w" sizes="(min-width: 960px) 38vw, 90vw" width="800" height="1000" loading="lazy" decoding="async" alt="Liliane Barbosa sorrindo, sentada em fundo de estúdio, de roupa clara">
-        </div>
-      </div>
-      <div data-reveal>
-        <p class="eyebrow">Quem cuida</p>
-        <h2 id="sobre-titulo">Liliane Barbosa</h2>
-        <p class="sobre__role">Especialista em loiros e alisamentos saudáveis.</p>
+        <h3>Cabelo</h3>
         <ul>
-          <li>Apaixonada por realçar a beleza natural de cada mulher.</li>
-          <li>Acredita que cabelos saudáveis são sinônimo de autoestima e confiança.</li>
-          <li>Está sempre em constante aprendizado.</li>
-          <li>Não abre mão de um bom café e boas conversas no salão.</li>
+          <li><strong>Loiros e luzes</strong><span>A especialidade da casa, pensando no que o fio aguenta.</span><a class="ul" href="https://wa.me/5511984160096?text=Ol%C3%A1%2C%20Li!%20Quero%20saber%20sobre%20loiros%20e%20luzes.">Consultar</a></li>
+          <li><strong>Morena iluminada</strong><span>Iluminação para cabelo castanho, com saúde para os fios.</span><a class="ul" href="https://wa.me/5511984160096?text=Ol%C3%A1%2C%20Li!%20Quero%20saber%20sobre%20morena%20iluminada.">Consultar</a></li>
+          <li><strong>Alisamentos</strong><span>Liso alinhado e com brilho, com análise do fio antes.</span><a class="ul" href="https://wa.me/5511984160096?text=Ol%C3%A1%2C%20Li!%20Quero%20saber%20sobre%20alisamento.">Consultar</a></li>
+          <li><strong>Terapia capilar</strong><span>Para quem passou por uma química que deixou o cabelo fragilizado.</span><a class="ul" href="https://wa.me/5511984160096?text=Ol%C3%A1%2C%20Li!%20Quero%20saber%20sobre%20tratamento%20para%20o%20cabelo.">Consultar</a></li>
         </ul>
-        <p class="sobre__src">Nas palavras dela, no perfil @lili_hairr.</p>
-        <div class="badges">
-          <span>Empresa de empreendedoras</span>
-          <span>Acolhe a comunidade LGBTQ+</span>
-        </div>
+      </div>
+      <div>
+        <h3>Beleza</h3>
+        <ul>
+          <li><strong>Manicure e pedicure</strong><span>Pé e mão.</span><a class="ul" href="https://wa.me/5511984160096?text=Ol%C3%A1%2C%20Li!%20Quero%20agendar%20manicure%20e%20pedicure.">Consultar</a></li>
+          <li><strong>Sobrancelhas</strong><span>Design feito no próprio salão.</span><a class="ul" href="https://wa.me/5511984160096?text=Ol%C3%A1%2C%20Li!%20Quero%20agendar%20design%20de%20sobrancelhas.">Consultar</a></li>
+          <li><strong>Depilação</strong><span>Com cera e depilação marroquina.</span><a class="ul" href="https://wa.me/5511984160096?text=Ol%C3%A1%2C%20Li!%20Quero%20saber%20sobre%20depila%C3%A7%C3%A3o.">Consultar</a></li>
+          <li><strong>Make express</strong><span>Maquiagem rápida no salão.</span><a class="ul" href="https://wa.me/5511984160096?text=Ol%C3%A1%2C%20Li!%20Quero%20agendar%20uma%20make%20express.">Consultar</a></li>
+        </ul>
       </div>
     </div>
-  </section>
+    <p class="note">Dá para fazer mais de um serviço ao mesmo tempo, porque aqui a gente ama otimizar o tempo.</p>
+  </div>
+</section>
 
-  <section class="section prova" id="avaliacoes" aria-labelledby="prova-titulo">
-    <div class="wrap">
-      <div class="section__head" data-reveal>
-        <p class="eyebrow">Avaliações</p>
-        <h2 id="prova-titulo">Quem senta na cadeira <em>volta</em>.</h2>
-      </div>
-      <div class="score" data-reveal>
-        <b>4,9</b>
-        <p><span class="stars" aria-hidden="true">★★★★★</span>68 avaliações no Google</p>
-      </div>
-      <div class="prova__grid">
-        <figure class="prova__photo" data-reveal>
-          <div class="ph"><img src="assets/img/no-salao-480.webp" srcset="assets/img/no-salao-480.webp 480w, assets/img/no-salao-831.webp 831w" sizes="(min-width: 960px) 22vw, 90vw" width="480" height="621" loading="lazy" decoding="async" alt="Cliente sorrindo na cadeira com cabelo curto iluminado, ao lado da profissional, refletidas no espelho redondo do salão"></div>
-          <figcaption>No salão, março de 2026.</figcaption>
-        </figure>
-        <div class="reviews">
-          <figure class="review" data-reveal>
-            <blockquote>“Atendimento excelente, meu cabelo é outro quando vou lá, minhas luzes ficam incríveis. A Ly e suas filhas sempre atenciosas, confio plenamente, meu loiro tem vida com os cuidados dela.”</blockquote>
-            <figcaption><b>Tuani Barreto</b> · Google</figcaption>
-          </figure>
-          <figure class="review" data-reveal>
-            <blockquote>“Eu tenho os cabelos cacheados e sinto muita confiança quando os trato na Li Hair. Com bons produtos e muito conhecimento, saio de lá satisfeita e com a autoestima lá em cima.”</blockquote>
-            <figcaption><b>Glaucia Elis</b> · Google</figcaption>
-          </figure>
-          <figure class="review" data-reveal>
-            <blockquote>“Super indico. Quando preciso ir no salão é lá que eu vou, sempre muito bem atendida e sempre satisfeita com o resultado. Profissionais excelentes.”</blockquote>
-            <figcaption><b>Janicleide Sousa</b> · Google</figcaption>
-          </figure>
-        </div>
-      </div>
-      <a class="link-arrow" href="https://maps.google.com/?cid=9302495675956941608" target="_blank" rel="noopener">Ver todas as avaliações no Google →</a>
+<section class="banner" aria-label="Quem cuida">
+  <div class="media">
+    <img src="assets/img/retrato-liliane-1100.webp" alt="" loading="lazy" style="object-position:50% 22%">
+    <img src="assets/img/no-salao-831.webp" alt="" loading="lazy" style="object-position:50% 30%">
+  </div>
+  <div class="inner"><h2>Quem cuida</h2></div>
+</section>
+
+<section id="quem-cuida" class="reveal">
+  <div class="wrap">
+    <h2>Liliane Barbosa</h2>
+    <p class="lede">Especialista em loiros e alisamentos saudáveis.</p>
+    <div class="prose">
+      <p>Apaixonada por realçar a beleza natural de cada mulher, a Li acredita que cabelo saudável é sinônimo de autoestima e confiança.</p>
+      <p>Está sempre em constante aprendizado, e não abre mão de um bom café e de boas conversas no salão. Quem cuida dos detalhes junto com ela são as filhas.</p>
     </div>
-  </section>
-
-  <section class="section" id="visita" aria-labelledby="visita-titulo">
-    <div class="wrap">
-      <div class="visita__card" data-reveal>
-        <div>
-          <p class="eyebrow">Visite</p>
-          <h2 id="visita-titulo">Na Vila Heliópolis, <em>perto de você</em>.</h2>
-        </div>
-        <div>
-          <dl class="info">
-            <div><dt>Endereço</dt><dd>R. Cel. Silva Castro, 76<br>Vila Heliópolis, São Paulo/SP<br>CEP 04231-015</dd></div>
-            <div><dt>Horário</dt><dd>Terça a sábado<br>10h às 19h</dd></div>
-            <div><dt>Contato</dt><dd><a href="tel:+5511984160096">(11) 98416-0096</a><br><a href="https://www.instagram.com/lili_hairr/" target="_blank" rel="noopener">@lili_hairr</a></dd></div>
-          </dl>
-          <div class="visita__actions">
-            <a class="btn btn--rosa" href="https://wa.me/5511984160096?text=Ol%C3%A1%2C%20Li!%20Vi%20a%20p%C3%A1gina%20do%20sal%C3%A3o%20e%20quero%20agendar%20um%20hor%C3%A1rio." target="_blank" rel="noopener">Agendar pelo WhatsApp</a>
-            <a class="btn btn--line" href="https://maps.google.com/?cid=9302495675956941608" target="_blank" rel="noopener">Abrir no Google Maps</a>
-          </div>
-        </div>
-      </div>
+    <div class="seals">
+      <div><span class="caps" style="font-size:22px">Empresa de empreendedoras</span></div>
+      <div><span class="caps" style="font-size:22px">Acolhe a comunidade LGBTQ+</span></div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <section class="section final" aria-labelledby="final-titulo">
-    <div class="wrap" data-reveal>
-      <h2 id="final-titulo">Seu loiro <em>com vida</em>.</h2>
-      <p>Conta para a Li o que você quer fazer no cabelo. É só chamar no WhatsApp.</p>
-      <a class="btn btn--rosa" href="https://wa.me/5511984160096?text=Ol%C3%A1%2C%20Li!%20Vi%20a%20p%C3%A1gina%20do%20sal%C3%A3o%20e%20quero%20agendar%20um%20hor%C3%A1rio." target="_blank" rel="noopener">Agendar pelo WhatsApp</a>
+<div class="gallery" aria-label="Galeria">
+  <div class="wrap">
+    <div class="grid reveal">
+      <figure class="g1"><img src="assets/img/unhas-nude-720.webp" alt="Unhas curtas esmaltadas em tom nude rosado" loading="lazy"></figure>
+      <figure class="g2"><img src="assets/img/no-salao-831.webp" alt="Cliente sorrindo na cadeira com cabelo curto iluminado, ao lado da profissional, refletidas no espelho do salão" loading="lazy" style="object-position:50% 35%"></figure>
+      <figure class="g3"><img src="assets/img/unhas-escuras-720.webp" alt="Unhas esmaltadas em tom vinho escuro" loading="lazy"></figure>
+      <figure class="g4"><img src="assets/img/cachos-luzes-720.webp" alt="Cachos com luzes loiras" loading="lazy" style="object-position:50% 40%"></figure>
     </div>
-  </section>
+  </div>
+</div>
 
+<section class="reveal" aria-label="Avaliações">
+  <div class="wrap">
+    <h2>Quem senta na cadeira<br>volta</h2>
+    <div class="score"><span class="big">4,9</span><em>68 avaliações no Google</em></div>
+    <div class="reviews">
+      <blockquote>“Atendimento excelente, meu cabelo é outro quando vou lá, minhas luzes ficam incríveis. A Ly e suas filhas sempre atenciosas, confio plenamente, meu loiro tem vida com os cuidados dela.”<cite>Tuani Barreto</cite></blockquote>
+      <blockquote>“Eu tenho os cabelos cacheados e sinto muita confiança quando os trato na Li Hair. Com bons produtos e muito conhecimento, saio de lá satisfeita e com a autoestima lá em cima.”<cite>Glaucia Elis</cite></blockquote>
+      <blockquote>“Super indico. Quando preciso ir no salão é lá que eu vou, sempre muito bem atendida e sempre satisfeita com o resultado. Profissionais excelentes.”<cite>Janicleide Sousa</cite></blockquote>
+    </div>
+    <p class="center"><a class="ul" href="https://maps.google.com/?cid=9302495675956941608">Ver todas as avaliações no Google</a></p>
+  </div>
+</section>
+
+<section class="location" id="visite">
+  <img class="bg" src="assets/img/hero-loiro-810.webp" alt="" loading="lazy">
+  <div class="wrap">
+    <h2>Visite o salão</h2>
+    <div class="map"><iframe title="Mapa: R. Cel. Silva Castro, 76, Vila Heliópolis, São Paulo" src="https://maps.google.com/maps?q=R.%20Cel.%20Silva%20Castro%2C%2076%2C%20Vila%20Heli%C3%B3polis%2C%20S%C3%A3o%20Paulo&z=16&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+    <div class="info">
+      <div><h3>Endereço</h3><p>R. Cel. Silva Castro, 76<br>Vila Heliópolis, São Paulo/SP<br>CEP 04231-015</p><p style="margin-top:12px"><a class="ul" href="https://maps.google.com/?cid=9302495675956941608">Abrir no Google Maps</a></p></div>
+      <div><h3>Horário</h3><p>Terça a sábado<br>das 10h às 19h</p></div>
+      <div><h3>Contato</h3><p><a class="ul" href="tel:+5511984160096">(11) 98416-0096</a><br><a class="ul" href="https://www.instagram.com/lili_hairr/">@lili_hairr</a></p></div>
+    </div>
+    <a class="pill on-photo" href="https://wa.me/5511984160096?text=Ol%C3%A1%2C%20Li!%20Vi%20a%20p%C3%A1gina%20do%20sal%C3%A3o%20e%20quero%20agendar%20um%20hor%C3%A1rio.">Agendar pelo WhatsApp</a>
+  </div>
+</section>
 </main>
 
-<footer class="foot">
-  <div class="wrap">
-    <p>Li Hair · Salão de Beleza Vila Heliópolis · R. Cel. Silva Castro, 76, São Paulo/SP</p>
-    <p>Prévia de página. Não é o site oficial do salão.</p>
-  </div>
+<footer>
+  <p>Li Hair, salão de beleza na Vila Heliópolis. R. Cel. Silva Castro, 76, São Paulo/SP</p>
+  <p>Prévia de página. Não é o site oficial do salão.</p>
 </footer>
 
 <nav class="actionbar" aria-label="Ações rápidas">
-  <a class="btn btn--rosa" href="https://wa.me/5511984160096?text=Ol%C3%A1%2C%20Li!%20Vi%20a%20p%C3%A1gina%20do%20sal%C3%A3o%20e%20quero%20agendar%20um%20hor%C3%A1rio." target="_blank" rel="noopener">Agendar no WhatsApp</a>
-  <a class="btn btn--line" href="https://maps.google.com/?cid=9302495675956941608" target="_blank" rel="noopener">Como chegar</a>
+  <a href="https://wa.me/5511984160096?text=Ol%C3%A1%2C%20Li!%20Vi%20a%20p%C3%A1gina%20do%20sal%C3%A3o%20e%20quero%20agendar%20um%20hor%C3%A1rio.">Agendar</a>
+  <a href="https://maps.google.com/?cid=9302495675956941608">Como chegar</a>
 </nav>
 
 <script>
 (function(){
-  var els=document.querySelectorAll('[data-reveal]');
-  if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('is-in')});return}
-  var io=new IntersectionObserver(function(entries){
-    entries.forEach(function(en){if(en.isIntersecting){en.target.classList.add('is-in');io.unobserve(en.target)}})
-  },{rootMargin:'0px 0px -8% 0px'});
-  els.forEach(function(e){io.observe(e)});
+  var h=document.getElementById('header');
+  function hs(){h.classList.toggle('solid',scrollY>80)}
+  addEventListener('scroll',hs,{passive:true});hs();
+
+  var els=document.querySelectorAll('.reveal');
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){
+      if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}
+    })},{threshold:.18});
+    els.forEach(function(el){io.observe(el)});
+  }else{els.forEach(function(el){el.classList.add('in')})}
+
+  var track=document.getElementById('track'),slides=[].slice.call(track.children),
+      prev=document.querySelector('.car-btn.prev'),next=document.querySelector('.car-btn.next'),
+      mq=matchMedia('(max-width:860px)'),i=2;
+  function render(){
+    if(mq.matches){track.style.transform='';return}
+    var w=slides[0].getBoundingClientRect().width,off=(track.parentElement.clientWidth-w)/2;
+    track.style.transform='translateX('+(off-i*w)+'px)';
+    slides.forEach(function(s,n){s.classList.toggle('is-active',n===i)});
+    prev.disabled=i===0;next.disabled=i===slides.length-1;
+  }
+  next.onclick=function(){i=Math.min(i+1,slides.length-1);render()};
+  prev.onclick=function(){i=Math.max(i-1,0);render()};
+  addEventListener('resize',render);render();
 })();
 </script>
 </body>
